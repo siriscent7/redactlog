@@ -4,6 +4,8 @@
 
 Logs leak sensitive data — emails, SSNs, credit cards, API tokens, phone numbers, IPs. RedactLog scrubs PII from log streams *before* they reach storage, using a single-scan multi-pattern engine. All processing is local; no data leaves the machine.
 
+🔗 **Live demo:** https://redactlog.onrender.com
+
 ---
 
 ## The problem
@@ -22,7 +24,8 @@ Application logs routinely capture PII and secrets. Once written to centralized 
 
 ## Demo
 ```bash
-$ echo "user jane@acme.com from 192.168.1.1 paid with card 4111 1111 1111 1111, ssn 555-12-3456" | redactlog user [REDACTED:EMAIL] from [REDACTED:IP] paid with card [REDACTED:CREDIT_CARD], ssn [REDACTED:SSN] redacted 4 PII items
+$ echo "user jane@acme.com from 192.168.1.1 paid with card 4111 1111 1111 1111, ssn 555-12-3456" | redactlog user [REDACTED:EMAIL] from [REDACTED:IP] paid with card [REDACTED:CREDIT_CARD], ssn [REDACTED:SSN] 
+redacted 4 PII items
 ```
 
 ## Correctness
