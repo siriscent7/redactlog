@@ -4,6 +4,7 @@
 
 Logs leak sensitive data — emails, SSNs, credit cards, API tokens, phone numbers, IPs. RedactLog scrubs PII from log streams *before* they reach storage, using a single-scan multi-pattern engine. All processing is local; no data leaves the machine.
 
+🔗 **Live demo:** https://redactlog.onrender.com
 ---
 
 ## The problem
